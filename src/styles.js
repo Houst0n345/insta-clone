@@ -124,7 +124,7 @@ export const useLoginPageStyles = makeStyles({
 
 // SignUp page: /pages/signup.js
 export const useSignUpPageStyles = makeStyles({
-  card: { maxWidth: 348, padding: "16px 40px", marginBottom: 10 },
+  card: { maxWidth: 348, padding: "8px 40px", margin: "4px 0 8px 0" },
   section: {
     display: "grid",
     placeItems: "center",
@@ -136,7 +136,7 @@ export const useSignUpPageStyles = makeStyles({
     backgroundPosition: "-98px 0",
     height: 51,
     width: 175,
-    margin: "22px auto 12px"
+    margin: "18px auto 12px"
   },
   cardHeaderSubHeader: {
     textAlign: "center",
@@ -146,13 +146,13 @@ export const useSignUpPageStyles = makeStyles({
     margin: "0 0 20px"
   },
   textField: {
-    marginBottom: 6
+    marginBottom: 3
   },
   button: {
-    margin: "10px 0px 16px 0px"
+    margin: "8px 0px 14px 0px"
   },
   orContainer: {
-    margin: "10px 0px",
+    margin: "6px 0px",
     display: "grid",
     gridTemplateColumns: "1fr auto 1fr",
     gridGap: 18,
@@ -166,7 +166,7 @@ export const useSignUpPageStyles = makeStyles({
   loginCard: {
     maxWidth: 348,
     padding: "16px 40px",
-    marginBottom: 10,
+    marginBottom: 8,
     display: "grid",
     alignItems: "center",
     gridTemplateColumns: "3fr 2fr"
@@ -488,6 +488,10 @@ export const useFollowButtonStyles = makeStyles({
 
 /* FeedPost component: /components/feed/FeedPost.js */
 export const useFeedPostStyles = makeStyles(theme => ({
+  postWrapper: {
+    border: "1px solid #e5e5e5",
+    marginBottom: '8vh'
+  },
   article: {
     border: "1px solid #e6e6e6",
     background: "#ffffff",
