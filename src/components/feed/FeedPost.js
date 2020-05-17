@@ -10,11 +10,13 @@ import Divider from "@material-ui/core/Divider";
 import Hidden from "@material-ui/core/Hidden";
 import TextField from "@material-ui/core/TextField";
 import FollowSuggestions from "../shared/FollowSuggestions";
+import OptionsDialog from "../shared/OptionsDialog";
 
 
 function FeedPost({post, index}) {
     const s = useFeedPostStyles();
     const [showCaption, setCaption] = useState(false)
+    const [showOptionsDialog, setOptionsDialog] = useState(false)
     const {media, id, likes, user, caption, comments} = post;
     const showFollowSuggestion = index === 1;
     return (
@@ -24,7 +26,7 @@ function FeedPost({post, index}) {
             }}>
                 <div className={s.postHeader}>
                     <UserCard user={user}/>
-                    <MoreIcon className={s.moreIcon}/>
+                    <MoreIcon className={s.moreIcon} onClick={()=>setOptionsDialog(true)}/>
                 </div>
                 <div>
                     <img src={media} alt="Post media" className={s.image}/>
@@ -38,7 +40,7 @@ function FeedPost({post, index}) {
                         <ShareIcon/>
                         <SaveButton/>
                     </div>
-                    <Typography className={s.like} variant={'subtitle2'}>
+                    <Typography className={s.likes} variant={'subtitle2'}>
                         <span>{likes === 1 ? '1 like' : `${likes} likes`}</span>
                     </Typography>
                     <div className={showCaption ? s.expanded : s.collapsed}>
@@ -93,6 +95,7 @@ function FeedPost({post, index}) {
                 </Hidden>
             </article>
             {showFollowSuggestion && <FollowSuggestions/>}
+            {showOptionsDialog && <OptionsDialog onClose={()=>setOptionsDialog(false)}/>}
         </>
     )
 }

@@ -638,6 +638,8 @@ export const usePostStyles = makeStyles(theme => ({
     }
   },
   image: {
+    maxHeight: '80vh',
+    objectFit: 'cover',
     width: "100%"
   },
   postButtons: {

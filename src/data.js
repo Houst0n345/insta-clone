@@ -23,7 +23,7 @@ export const defaultPost = {
   caption: `<span class="">Do you know the 10 JavaScript concepts you need to learn React? 🤔⚛️👇<br>•<br>•<br>👉 Get the FREE cheatsheet to learn them now 🔥</span>`,
   user: defaultUser,
   media:
-    "https://images.pexels.com/photos/3499174/pexels-photo-3499174.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "https://images.pexels.com/photos/1368382/pexels-photo-1368382.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
   comments: [],
   created_at: "2020-02-28T03:08:14.522421+00:00"
 };
@@ -35,7 +35,7 @@ export function getDefaultPost() {
     caption: `<span class="">Do you know the 10 JavaScript concepts you need to learn React? 🤔⚛️👇<br>•<br>•<br>👉 Get the FREE cheatsheet to learn them now 🔥</span>`,
     user: defaultUser,
     media:
-      "https://images.pexels.com/photos/3499174/pexels-photo-3499174.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+      "https://images.pexels.com/photos/1368382/pexels-photo-1368382.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
     comments: [],
     created_at: "2020-02-28T03:08:14.522421+00:00"
   };

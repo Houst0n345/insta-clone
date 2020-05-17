@@ -11,15 +11,15 @@ import {Link} from "react-router-dom";
 import FollowButton from "./FollowButton";
 
 
-function FollowSuggestions() {
+function FollowSuggestions({hideHeader}) {
     const s = useFollowSuggestionsStyles();
     let loading = false;
     return <div className={s.container}>
-        <Typography color={'textSecondary'}
-                    variant={'subtitle2'}
-                    className={s.typography}>
+        {!hideHeader && <Typography color={'textSecondary'}
+                     variant={'subtitle2'}
+                     className={s.typography}>
             Suggestions For You
-        </Typography>
+        </Typography>}
         {loading ? (
             <LoadingLargeIcon/>
         ) : (
